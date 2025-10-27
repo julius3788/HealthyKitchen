@@ -6,6 +6,7 @@ import Banner from './components/Banner/Banner';
 import AppStore from './components/AppStore/AppStore';
 import Testimoni from './components/Testimoni/Testimoni';
 import Footer from './components/Footer/footer';
+import CalorieCalculator from './components/CalorieCalculator/CalorieCalculator';
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
       <Services />
       <Banner />
       <AppStore />
+      <CalorieCalculator />
       <Testimoni />
       <Footer />
       </div>
