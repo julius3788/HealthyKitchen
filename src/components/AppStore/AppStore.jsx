@@ -1,5 +1,5 @@
 import React from 'react';
-import appStoreImg from '../../assets/website/appstore.png';
+import appStoreImg from '../../assets/website/appStore.png';
 import playStoreImg from '../../assets/website/PlayStore.png';
 import gif from '../../assets/website/mobile-bike.gif';
 
