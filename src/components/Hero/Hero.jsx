@@ -56,7 +56,7 @@ const Hero = () => {
                 <img 
                   src={currentImage}
                   alt="Healthy Food"
-                  className='w-[280px] sm:w-[350px] object-contain transform hover:scale-105 transition duration-500'
+                  className='w-[280px] sm:w-[350px] object-contain transform hover:scale-105 mx-auto spin transition duration-500'
                 />
               </div>
             </div>
@@ -67,14 +67,14 @@ const Hero = () => {
                 <div 
                   key={item.id} 
                   className={`cursor-pointer transform hover:scale-110 duration-300 ${
-                    currentImage === item.img ? 'scale-110 ring-2 ring-primary rounded-lg' : ''
+                    currentImage === item.img ? 'scale-200  rounded-lg' : ''
                   }`}
                   onClick={() => setCurrentImage(item.img)}
                 >
                   <img
                     src={item.img}
                     alt="Food thumbnail"
-                    className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
+                    className="w-14 h-14 sm:w-16 sm:h-16 object-contain mx-auto spin"
                   />
                 </div>
               ))}

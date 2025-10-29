@@ -1,4 +1,12 @@
 import React from 'react';
+import FooterLogo from '../../assets/food-logo.png';
+import{
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaLocationArrow,
+  FaMobileAlt,}
+ from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -7,7 +15,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-8">
           {/* Brand Section */}
           <div className="lg:col-span-2">
-            <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">FOODIE</h2>
+            <img src={FooterLogo} alt="" className='w-20'/>
+            <h1 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">HEALTY KITCHEN</h1>
             <p className="text-gray-600 dark:text-gray-300 mb-4 leading-6">
               Your trusted partner for healthy and delicious meals. We believe that eating well should be enjoyable and accessible to everyone, with fresh ingredients and nutritious recipes.
               <br />
@@ -15,6 +24,7 @@ const Footer = () => {
             </p>
             <div className="text-gray-600 dark:text-gray-300">
               <p className="mb-1 font-medium">Jakarta, Indonesia</p>
+              <FaMobileAlt />
               <p className="font-medium">+91 123456789</p>
             </div>
           </div>
