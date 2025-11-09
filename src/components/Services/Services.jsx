@@ -28,8 +28,17 @@ const ServiceData = [
 ];
 
 const Services = () => {
+
+const phoneNumber = "6281234567890";
+const message = "Halo, saya ingin order makanan sehat";
+
+const handleClick = () => {
+const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank");
+};
+ 
   return (
-    <div className='py-16 bg-gray-50 dark:bg-gray-900 dark:text-white'>
+    <div id = 'services' className='py-16 bg-gray-50 dark:bg-gray-900 dark:text-white'>
       <div className='container mx-auto px-4'>
         {/* Header section */}
         <div className='text-center mb-20 max-w-[500px] mx-auto'>
@@ -77,7 +86,9 @@ const Services = () => {
                   ))}
                 </div>
                 
-                <button className='w-full px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-full hover:scale-105 duration-200 text-sm font-semibold shadow-md'>
+                <button 
+                onClick={handleClick}
+                className='w-full px-6 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-full hover:scale-105 duration-200 text-sm font-semibold shadow-md'>
                   Order Now
                 </button>
               </div>

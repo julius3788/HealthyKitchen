@@ -1,5 +1,5 @@
 import React from 'react';
-import bgImg from '../../assets/website/vektor2.png';
+import bgImg from '../../assets/website/vektor4.png';
 import Food1 from '../../assets/food/c1.png';
 import Food2 from '../../assets/food/c2.png';
 import Food3 from '../../assets/food/c3.png';
@@ -22,6 +22,16 @@ const bgImage = {
 const Hero = () => {
   const [currentImage, setCurrentImage] = React.useState(Food1);
 
+const phoneNumber = "6281234567890";
+const message = "Halo, saya ingin order makanan sehat";
+
+const handleClick = () => {
+const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+   };
+
+
   return (
     <div 
       style={bgImage}
@@ -39,11 +49,13 @@ const Hero = () => {
               We believe that healthy food should be flavorful, satisfying, and accessible to everyone.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 mt-4'>
-              <button className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-3 rounded-full hover:scale-105 duration-200 font-semibold shadow-lg">
+              <button 
+              onClick={handleClick}
+              className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-3 rounded-full hover:scale-105 duration-200 font-semibold shadow-lg">
                 Order Now
               </button>
               <button className="border-2 border-primary text-primary dark:text-white px-8 py-3 rounded-full hover:bg-primary hover:text-white duration-200 font-semibold">
-                View Menu
+              <a href='#services'>  View Menu </a>
               </button>
             </div>
           </div>

@@ -4,6 +4,17 @@ import { FaCartShopping } from 'react-icons/fa6';
 import DarkMode from './DarkMode';
 
 const Navbar = () => {
+
+const phoneNumber = "6281234567890";
+  const message = "Halo, saya ingin order makanan sehat";
+
+const handleClick = () => {
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+   };
+
+
   return <>
   <div className='shadow-md bg-white dark:bg-gray-900
   dark:text-white duration-200'>
@@ -25,6 +36,7 @@ const Navbar = () => {
                     <li><a href='#' className='inline-block py-4 px-4 hover:text-primary'>Contact</a></li>
                 </ul>
                 <button 
+                onClick={handleClick}
                 className='bg-gradient-to-r from-primary to-secondary text-white px-4 py-21 rounded-full hover:scale-105 duration-300 flex items-center gap-2'>
                     Order
                     <FaCartShopping className="text-xl text-white drop-shadow-sm cursor-pointer" />
